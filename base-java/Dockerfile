@@ -1,6 +1,6 @@
-ARG JITSI_REPO=jitsi
+ARG JITSI_REPO=rvolosatovs
 ARG BASE_TAG=latest
-FROM ${JITSI_REPO}/base:${BASE_TAG}
+FROM ${JITSI_REPO}/jitsi-base:${BASE_TAG}
 
 RUN	\
 	mkdir -p /usr/share/man/man1 && \

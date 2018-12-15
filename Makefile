@@ -1,14 +1,13 @@
 FORCE_REBUILD ?= 0
 JITSI_RELEASE ?= stable
 JITSI_BUILD ?= latest
-JITSI_REPO ?= jitsi
-JITSI_SERVICES ?= base base-java web prosody jicofo jvb jigasi jibri
+JITSI_REPO ?= rvolosatovs
+JITSI_SERVICES ?= jitsi-base jitsi-base-java jitsi-web prosody jicofo jvb jigasi jibri
 
 BUILD_ARGS := --build-arg JITSI_REPO=$(JITSI_REPO) --build-arg JITSI_RELEASE=$(JITSI_RELEASE)
 ifeq ($(FORCE_REBUILD), 1)
   BUILD_ARGS := $(BUILD_ARGS) --no-cache
 endif
-
 
 all:	build-all
 
